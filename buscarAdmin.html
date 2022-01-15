@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Poltrona | Diseño de interiores</title>
+
+	<meta name="application-name" content="Poltrona">
+
+	<link rel="icon" sizes="192x192" href="img/pol/favicon/icon.png">
+
+	<link rel="apple-touch-icon" href="img/pol/favicon/ios-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/pol/favicon/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/pol/favicon/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/pol/favicon/touch-icon-ipad-retina.png">
+
+	<meta name="msapplication-wide310x150logo" content="img/pol/favicon/icon_widetile.png">
+	<meta name="msapplication-square310x310logo" content="img/pol/favicon/icon_largetile.png">
+	<meta name="msapplication-square70x70logo" content="img/pol/favicon/icon_smalltile.png">
+	<meta name="msapplication-square150x150logo" content="img/pol/favicon/icon_mediumtile.png">
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- Styles -->
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<style>
+	.input-logout {
+		background: transparent; 
+		border:0; 
+		position:absolute; 
+		left:0; 
+		width:50%; 
+		height:50px;
+	}
+</style>
+
+<body>
+	<nav class="floating-menu">
+		<div class="container">
+			<div class="row">
+				<form action="/logout" method="post" class="col-6 text--center">
+					<input class="input-logout" type="submit" value="" />
+					<img class="item" src="img/shared/logout.svg" alt="Salir">
+					<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+				</form>
+
+				<div class="col-6 text--center">
+					<a href="buscar" target="_self">
+						<img class="item" src="img/shared/search.svg" alt="Buscar">
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="buscarAdmin.html"><img src="/img/logoHeader.svg" alt="facilHome"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="container column-wrapper">
+			<div class="row">
+				<div class="col-xs-12">
+				
+				
+					<div class="input-group x5">
+						
+						<label class="form-label" for="buscarProducto">Escribir para filtrar resultados</label>
+						<input class="form-control x2" th:name="buscarProducto" id="buscarProducto" type="text">
+					</div>
+                    <div class="historys">
+                       <div class="history">
+                             <div class="imgCategory c1">
+							 </div>
+							 <p>Comfy</p>
+					   </div>
+					   <div class="history">
+								<div class="imgCategory c2">
+								</div>
+								<p>Living</p>
+				 		 </div>
+				 		 <div class="history">
+								<div class="imgCategory c3">
+								</div>
+								<p>Deco</p>
+			  			</div>
+			 			 <div class="history">
+								<div class="imgCategory c4">
+								</div>
+									<p>Sillones</p>
+		  				</div>
+						  <div class="history">
+								<div class="imgCategory c5">
+								</div>
+							<p>Living</p>
+				 		 </div>
+						  <div class="history historyUltimo">
+								<div class="imgCategory c6">
+								</div>
+							<p>Living</p>
+				 		 </div>
+						 
+					</div>
+				
+
+					<h2>Productos (<span class="results-counter"></span>)</h2>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="puntoss" src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+                    <a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						<img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						<img  src="img/Frame 9.svg" alt="">
+					</a>
+                    <a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						<img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+                    <a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+                        <img  src="img/Frame 9.svg" alt="">
+					</a>
+					
+
+					<div class="result hidden2" th:each="material : ${materiales}">
+						<div class="row">
+							<div class="col-8">
+								<span class="nombre" th:text="${material.material}"></span>
+								<span class="cod" th:text="${material.codigoMaterial}"></span>
+							</div>
+
+							<div class="col-4">
+								<a class="float--right x2--right x1--top" th:href="@{/producto/}+${material.codigoMaterial}"  target="_self">
+									
+								</a>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="cargar10">
+						<p>  Cargar 10 más</p>
+                    
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+</body>
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/buscar.js"></script>
+
+</html>

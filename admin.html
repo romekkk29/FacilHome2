@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Facil Home</title>
+
+	<meta name="application-name" content="Poltrona">
+
+	<link rel="icon" sizes="192x192" href="/img/pol/favicon/icon.png">
+
+	<link rel="apple-touch-icon" href="/img/pol/favicon/ios-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/pol/favicon/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/pol/favicon/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/pol/favicon/touch-icon-ipad-retina.png">
+
+	<meta name="msapplication-wide310x150logo" content="/img/pol/favicon/icon_widetile.png">
+	<meta name="msapplication-square310x310logo" content="/img/pol/favicon/icon_largetile.png">
+	<meta name="msapplication-square70x70logo" content="/img/pol/favicon/icon_smalltile.png">
+	<meta name="msapplication-square150x150logo" content="/img/pol/favicon/icon_mediumtile.png">
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+
+	<!-- Styles -->
+	<link href="/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="setTime">
+	<img  id="logo1" src="img/marca.svg" alt="">
+	<div class="contenedorPuntos">
+		<div class="cargaPuntos">
+		</div>
+	</div>
+	
+	<span class="loading-spinner hidden">
+		<img src="/img/shared/spinner.gif" width="60" height="60" alt="Cargando">
+	</span>
+
+	<header class="hidden2">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<img src="/img/logoHeader.svg" alt="facilHome">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="content">
+		<div class="container column-wrapper">
+			<div class="row">
+				<div class="col-xs-12">
+					<p class="x5 x5--top bienv hidden2">¡Bienvenido!</p>
+
+					<h3 th:if="${logout != null}" th:text="${logout}" style="color: lightseagreen;"></h3>
+					<form action="/logincheck" class="hidden2" method="post">
+						<div class="input-group">
+							<label class="form-label" for="logMail">Email</label>
+							<input id="aca" class="form-control" type="email" id="logMail" name="mail" title="Email" required>
+						</div>
+
+						<div class="input-group x1">
+							<img class="icon-view-show" src="/img/pol/icons/view-show.svg" alt="Mostrar">
+							<img class="icon-view-hide hidden" src="/img/pol/icons/view-hide.svg" alt="Ocultar">
+
+							<label class="form-label" for="logPassword">Password</label>
+							<input id="aca" class="form-control" type="password" id="logPassword" name="password"
+								title="Contraseña" required>
+						</div>
+
+						<div class="input-message error x3 hidden" th:if="${error != null}">
+							El mail o la contraseña con invalidos
+						</div>
+
+						<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+						<button id="btnIngresar" class="btn btn-primary x2 hidden2" type="submit">Ingresar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+
+<!-- Javascript -->
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" src="/js/admin.js"></script>
+
+</html>

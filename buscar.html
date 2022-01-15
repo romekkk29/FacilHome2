@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fácil Home</title>
+
+	<meta name="application-name" content="Poltrona">
+
+	<link rel="icon" sizes="192x192" href="img/fav_icon.png">
+
+	<link rel="apple-touch-icon" href="img/pol/favicon/ios-icon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/pol/favicon/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/pol/favicon/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/pol/favicon/touch-icon-ipad-retina.png">
+
+	<meta name="msapplication-wide310x150logo" content="img/pol/favicon/icon_widetile.png">
+	<meta name="msapplication-square310x310logo" content="img/pol/favicon/icon_largetile.png">
+	<meta name="msapplication-square70x70logo" content="img/pol/favicon/icon_smalltile.png">
+	<meta name="msapplication-square150x150logo" content="img/pol/favicon/icon_mediumtile.png">
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- Styles -->
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<style>
+	.input-logout {
+		background: transparent; 
+		border:0; 
+		position:absolute; 
+		left:0; 
+		width:50%; 
+		height:50px;
+	}
+</style>
+
+<body class="setTime">
+	<div class="oscurecer hidden3">
+	</div>
+	<nav class="floating-menu hidden2">
+		<div class="container">
+			<div class="row">
+				<form  class="col-6 text--center modalComunicacion2">
+					<a href="#" class="modalComunicacion">
+						<img src="img/Talk.svg" alt="">
+					</a>
+				</form>
+
+				<div class="col-6 text--center focuseame">
+					<a href="#" target="_self">
+						<img class="item" src="img/shared/search.svg" alt="Buscar">
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<header class="hidden2">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="buscar.html"><img src="/img/Nombre.svg" alt="facilHome"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<img  id="logo1" src="img/marca.svg" alt="">
+	<div class="contenedorPuntos">
+		<div class="cargaPuntos">
+		</div>
+	</div>
+
+	<section class="content hidden2">
+		<div class="container column-wrapper">
+			<div class="row">
+				<div class="col-xs-12">
+				
+				
+					<div class="input-group x5">
+						
+						<label class="form-label" for="buscarProducto">Escribir para filtrar resultados</label>
+						<input class="form-control x2" th:name="buscarProducto" id="buscarProducto" type="text">
+					</div>
+                    <div class="historys">
+                       <div class="history">
+                             <div class="imgCategory c1">
+							 </div>
+							 <p>Baño</p>
+					   </div>
+					   <div class="history">
+								<div class="imgCategory c2">
+								</div>
+								<p>Cocina</p>
+				 		 </div>
+				 		 <div class="history">
+								<div class="imgCategory c3">
+								</div>
+								<p>Laundry</p>
+			  			</div>
+			 			 <div class="history">
+								<div class="imgCategory c4">
+								</div>
+									<p>Vestidor</p>
+		  				</div>
+						  <div class="history historyUltimo">
+								<div class="imgCategory c5">
+								</div>
+							<p>Organizador</p>
+				 		 </div>
+						 
+						 
+					</div>
+				
+
+					<h2>Productos (<span class="results-counter"></span>)</h2>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					<a href="#" class="searchProduct">
+						<div class="imgProd">
+							<img src="img/image 44.svg" alt="">
+							<div>
+								<p id="p1">Nombre producto, Marca</p>
+								<p id="p2">Precio o codigo</p>
+							</div>
+						</div>
+						
+						<img id="flecha" src="img/Subtract.svg" alt="">
+					</a>
+					
+
+					<div class="result hidden2" th:each="material : ${materiales}">
+						<div class="row">
+							<div class="col-8">
+								<span class="nombre" th:text="${material.material}"></span>
+								<span class="cod" th:text="${material.codigoMaterial}"></span>
+							</div>
+
+							<div class="col-4">
+								<a class="float--right x2--right x1--top" th:href="@{/producto/}+${material.codigoMaterial}"  target="_self">
+									
+								</a>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="cargar10">
+						<p>  Cargar 10 más</p>
+                    
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="modalComu">
+		<div class="modalComu2">
+				<img class="instMod" src="img/instagram.svg" alt="">
+				<img src="img/wpp.svg" alt="">
+		</div>
+		<div class="modalComu3">
+			<p>Volver</p>
+		</div>
+	</div>
+	
+	
+</body>
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/buscar.js"></script>
+
+</html>
