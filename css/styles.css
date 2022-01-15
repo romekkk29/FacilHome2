@@ -1002,7 +1002,7 @@ section{
   font-family: 'Quicksand', sans-serif;
     font-size: 48px;
     margin-top: 40px !important;
-    margin-bottom: 100px !important;
+    margin-bottom: 80px !important;
 }
 .hidden2{
   visibility: hidden;
@@ -1138,4 +1138,7 @@ header{
   background-color: rgba(0, 0, 0, 0.5);
   z-index:2132;
  
+}
+.addm{
+  margin-top: 0px;
 }
