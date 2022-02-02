@@ -316,6 +316,7 @@ h2{
   justify-content: center;
   align-items: center;
   margin-bottom: 60px;
+  margin-top: 60px;
 }
 .cargar10:hover{
   color:white;
@@ -988,7 +989,10 @@ section{
 
 
 /* CAMBIOS */
-#aca{
+#logPassword{
+  border-radius: 50px;
+}
+#logMail{
   border-radius: 50px;
 }
 .icon-view-show{
@@ -1111,11 +1115,46 @@ header{
   margin-bottom: -100%;
   transition: all 0.5s ease-in-out;
 }
+.modalComu33{
+  height: 249px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3223354;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: -100%;
+  transition: all 0.5s ease-in-out;
+}
 .modalComu2{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 192px;
+}
+.modalComu22{
+  display: flex;
+  flex-direction: column;
+  height: 192px;
+}
+h4{
+  padding: 20px 20px 10px 20px;
+}
+.modalComu22 p{
+  padding: 0px 20px 15px 20px;
+  line-height: 20px;
+}
+.modalComu22 span{
+  font-weight: bold;
+}
+@media all and (min-width:750px){
+  h4{
+    padding: 20px 20px 10px 15%;
+  }
+  .modalComu22 p{
+    padding: 0px 20px 30px 15%;
+  
+  }
 }
 .modalComu3{
   text-align: center;
@@ -1126,6 +1165,24 @@ header{
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   font-family: 'Noto Sans';
   font-size: 16px;
+  color: black;
+}
+.modalComu44{
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 57px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: 'Noto Sans';
+  font-size: 16px;
+}
+.modalComu44 hr{
+  position: absolute;
+  left: 50%;
+  height: 55px;
+  width: 1px;
+  
 }
 .instMod{
   margin-right: 18%
@@ -1141,4 +1198,139 @@ header{
 }
 .addm{
   margin-top: 0px;
+}
+.sectionDesc{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionDesc2{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:0px;
+    padding-top: 0px;
+    margin-bottom: 100px;
+}
+.sectionDesc3{
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-left:20px;
+    margin-right:20px;
+}
+.descripcionProducto{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: white;
+  max-width: 500px;
+  border-radius: 20px;
+  width: 100%;
+ 
+}
+.descripcionProducto div{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+}
+#palabraClave{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #909090;
+  opacity: 0.8;
+  padding-bottom: 4px;
+}
+#tituloProducto{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: normal;
+font-size: 42px;
+line-height: 45px
+
+}
+#largest{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+}
+#haceFlex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#haceFlex2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border:none;
+}
+#haceFlex div{
+  margin:0px;
+  border:none;
+}
+#precioProducto{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+
+  }
+
+  .descripcionProducto2{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    max-width: 500px;
+    border-radius: 20px;
+    width: 100%;
+   
+  }
+.needMargin{
+  text-align: center;
+}
+.cargar11{
+  margin-top:0px;
+}
+#puntosCarru {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#puntosCarru div{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(196, 196, 196, 0.5);
+  margin-left: 10px;
+}
+
+.descripcionProducto3{
+  margin:20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: white;
+  max-width: 500px;
+  border-radius: 20px;
+  width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: all 2s ease-in-out;
+}
+.descripcionProducto3 img{
+  object-fit: cover;
+  width: 344px;
+  height: 206px;
 }

@@ -48,18 +48,26 @@ cargar10.addEventListener("click",function(){
  },2300);
 
 
- let modalComunicacion=document.querySelector(".modalComunicacion2");
+ // modal comunicacion
+ let modalComunicacion=document.querySelectorAll(".modalComunicacion2");
+ console.log(modalComunicacion);
  let modalComunicacion3=document.querySelector(".modalComu3");
  let modalComu=document.querySelector(".modalComu");
  let oscurecer=document.querySelector(".oscurecer");
- modalComunicacion.addEventListener("click",function(){
-	 modalComu.style.marginBottom="0%";
-	 oscurecer.classList.remove("hidden3");
- })
+modalComunicacion.forEach(element=> {
+	element.addEventListener("click", function(){
+		modalComu.style.marginBottom="0%";
+		oscurecer.classList.remove("hidden3");
+	})
+	}
+)
+
  modalComunicacion3.addEventListener("click",function(){
 	modalComu.style.marginBottom="-100%";
 	oscurecer.classList.add("hidden3");
  })
+
+ // focus al buscar
  let focuseame=document.querySelector(".focuseame");
  let formControl=document.querySelector(".form-control");
  focuseame.addEventListener("click",function(){

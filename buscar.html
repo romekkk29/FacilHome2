@@ -8,8 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Fácil Home</title>
 
-	<meta name="application-name" content="Poltrona">
-
 	<link rel="icon" sizes="192x192" href="img/fav_icon.png">
 
 
@@ -79,35 +77,50 @@
 						<label class="form-label" for="buscarProducto">Escribir para filtrar resultados</label>
 						<input class="form-control x2" th:name="buscarProducto" id="buscarProducto" type="text">
 					</div>
-                    <div class="historys">
-                       <div class="history">
-                             <div class="imgCategory c1">
+					<div class="historys">
+						<a href="#"><div class="history">
+							 <div class="imgCategory c1">
 							 </div>
-							 <p>Baño</p>
-					   </div>
-					   <div class="history">
-								<div class="imgCategory c2">
+							 	<p>Cocina</p>
+						</div></a>
+						<a href="#"><div class="history">
+							 <div class="imgCategory c2">
+							 </div>
+							 	<p>Hidratacion</p>
+						</div></a> 
+						<a href="#"><div class="history">
+							 <div class="imgCategory c3">
+							 </div>
+								 <p>Baño</p>
+						</div></a>
+						<a href="#"> <div class="history">
+							 <div class="imgCategory c4">
+							 </div>
+								 <p>Laundry</p>
+						</div></a>
+						<a href="#"> <div class="history">
+							 <div class="imgCategory c4">
+							 </div>
+								<p>Vestidor</p>
+						</div></a>
+						<a href="#"><div class="history">
+								 <div class="imgCategory c4">
 								</div>
-								<p>Cocina</p>
-				 		 </div>
-				 		 <div class="history">
-								<div class="imgCategory c3">
-								</div>
-								<p>Laundry</p>
-			  			</div>
-			 			 <div class="history">
-								<div class="imgCategory c4">
-								</div>
-									<p>Vestidor</p>
-		  				</div>
-						  <div class="history historyUltimo">
-								<div class="imgCategory c5">
-								</div>
-							<p>Organizador</p>
-				 		 </div>
-						 
-						 
-					</div>
+									 <p>Organizadores</p>
+						</div></a>
+						<a href="#"><div class="history">
+							 <div class="imgCategory c4">
+							 </div>
+								 <p>Kids</p>
+						</div></a>
+						<a href="#"> <div class="history historyUltimo">
+							 <div class="imgCategory c5">
+							 </div>
+						 			<p>Accesorios</p>
+					   </div></a>
+						  
+						  
+					 </div>
 				
 
 					<h2>Productos (<span class="results-counter"></span>)</h2>
@@ -323,20 +336,7 @@
 					</a>
 					
 
-					<div class="result hidden2" th:each="material : ${materiales}">
-						<div class="row">
-							<div class="col-8">
-								<span class="nombre" th:text="${material.material}"></span>
-								<span class="cod" th:text="${material.codigoMaterial}"></span>
-							</div>
-
-							<div class="col-4">
-								<a class="float--right x2--right x1--top" th:href="@{/producto/}+${material.codigoMaterial}"  target="_self">
-									
-								</a>
-							</div>
-						</div>
-					</div>
+				
 					<a href="#" class="cargar10">
 						<p>  Cargar 10 más</p>
                     

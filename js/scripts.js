@@ -5,11 +5,29 @@ $('.results-counter').text(results);
 
 // Mostrar spinner
 $('#btnIngresar').click(function () {
-	$('.loading-spinner').removeClass('hidden');
-
-	setTimeout(function () {
-		$('.loading-spinner').addClass('hidden');
-	}, 10000);
+	let body =document.querySelector("body");
+	let logo1=document.querySelector("#logo1");
+	let content=document.querySelector(".content");
+	let header=document.querySelector("header");
+	let contenedorPuntos=document.querySelector(".contenedorPuntos");
+	
+	body.classList.add("setTime");
+	logo1.classList.remove("hidden2");
+	content.classList.add("hidden2"); 
+	header.classList.add("hidden2");
+	contenedorPuntos.classList.remove("hidden2");
+	setTimeout(function(){
+		body.classList.remove("setTime");
+		logo1.classList.add("hidden2");
+	
+	},1500);
+	setTimeout(function(){
+		content.classList.remove("hidden2"); 
+		header.classList.remove("hidden2");
+		header.style.backgroundColor="white";
+		contenedorPuntos.classList.add("hidden2");
+		
+	},2300);
 });
 
 // FORM-CONTROL (INPUTS)

@@ -1,108 +1,123 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Fácil Home</title>
+	
+		<link rel="icon" sizes="192x192" href="img/fav_icon.png">
+	
+	
+		<!-- JQuery -->
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	
+		<!-- Styles -->
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
+	
+	</head>
+	
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Poltrona | Diseño de interiores</title>
-
-	<meta name="application-name" content="Poltrona">
-
-	<link rel="icon" sizes="192x192" href="/img/pol/favicon/icon.png">
-
-	<link rel="apple-touch-icon" href="/img/pol/favicon/ios-icon.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/img/pol/favicon/touch-icon-ipad.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/img/pol/favicon/touch-icon-iphone-retina.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/img/pol/favicon/touch-icon-ipad-retina.png">
-
-	<meta name="msapplication-wide310x150logo" content="/img/pol/favicon/icon_widetile.png">
-	<meta name="msapplication-square310x310logo" content="/img/pol/favicon/icon_largetile.png">
-	<meta name="msapplication-square70x70logo" content="/img/pol/favicon/icon_smalltile.png">
-	<meta name="msapplication-square150x150logo" content="/img/pol/favicon/icon_mediumtile.png">
-
-	<!-- JQuery -->
-	<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
-
-	<!-- Styles -->
-	<link href="/css/styles.css" rel="stylesheet" type="text/css">
-
-</head>
-
-<body class="public">
-	<header>
+<body >
+	<div class="oscurecer hidden3">
+	</div>
+	<header >
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<img src="/img/shared/logo-header.svg" alt="Poltrona">
+					<a href="buscar.html"><img src="img/Nombre.svg" alt="facilHome"></a>
 				</div>
 			</div>
 		</div>
 	</header>
-	
-	<div class="image-slider">
-		<div class="slide" id="slide"></div>
-		<div class="slide hidden" id="slide-empty"></div>
-	</div>
+	<nav class="floating-menu">
+		<div class="container">
+			<div class="row">
+				<form  class="col-6 text--center modalComunicacion2">
+					<a href="#" class="modalComunicacion">
+						<img src="img/Talk.svg" alt="">
+					</a>
+				</form>
 
-	<img id="coverImage" th:src="@{/loadfoto/} + ${codigofoto}" alt="">
-
-	<section class="content">
-		<div class="container column-wrapper">
-			<div class="row x4--top">
-				<div class="col-xs-12" th:each="material : ${material}">
-					<p class="anclaje">Nombre</p>
-					<h1 th:text="${material.material}"></h1>
-
-					<span class="item-divider x3"></span>
-
-					<div class="description-container" th:if="${material.especificaciones != ''}">
-						<p class="anclaje">Descripción</p>
-						<p class="x1" th:text="${material.especificaciones}"></p>
-
-						<span class="item-divider x3"></span>
-					</div>
-
-					<div class="row">
-						<div class="col-6">
-							<p class="anclaje">Categoria</p>
-							<p class="categoria x1" th:text="${material.nombreCompleto}" style="text-transform: lowercase"></p>
-						</div>
-
-						<div class="col-6">
-							<p class="anclaje text--right">Stock</p>
-							<p class="stock x1 text--right" th:text="${material.stock}"></p>
-							<div th:style="'background:url(' + @{/loadqr/} + ${material.codigoMaterial} + '); background-size: cover'"></div>
-						</div>
-					</div>
-
-					<span class="item-divider x3"></span>
-
-					<div class="row">
-						<div class="col-6">
-							<p class="x1">Total</p>
-						</div>
-
-						<div class="col-6">
-							<p class="price text--right" th:text="${material.PrecioUnitarioVtaTipoMoneda}"></p>
-						</div>
-					</div>
-
-					<span class="item-divider x3"></span>
-					<!--<a class="btn btn-primary x4" href="checkout" target="_self">Generar orden de compra</a>-->
-					<p class="cod">Código: <span th:text="${material.codigoMaterial}"></span></p>
-
+				<div class="col-6 text--center focuseame">
+					<a href="buscar.html" target="_self">
+						<img class="item" src="img/shared/search.svg" alt="Buscar">
+					</a>
 				</div>
 			</div>
 		</div>
+	</nav>
+
+
+	<section class="sectionDesc3">
+		
+	<div class="descripcionProducto3">
+			<img id="imagenCarru" src="img/image 55.png" alt="">
+	</div>
+
+	<div id="puntosCarru"> 
+		<a href="#"><div class="dot1"></div></a>
+		<a href="#"><div class="dot2"></div></a>
+		<a href="#"><div class="dot3"></div></a>
+	</div>
+
+
 	</section>
+	<section class="sectionDesc" >	
+		<div class="descripcionProducto">
+     <div>
+		 <p id="palabraClave">Olmitos</p>
+		 <p id="tituloProducto">Botella Termica</p>
+		
+	 </div>
+	
+	 <div>
+		 <p id="palabraClave">Descripción</p>
+		 <p id="largest" >Botella termica de aluminio, 500ml. Colores rosa, turquesa, vision claro y gris</p>
+	 </div>
+	 <div id="haceFlex">
+		 <div>
+			 <p id="palabraClave">Categoria</p>
+			 <p id="largest">Deco, Comfy</p>
+		 </div>
+		 <div>
+			 <p id="palabraClave">Stock</p>
+			 <p id="largest">Disponible</p>
+		 </div>
+	 </div>
+	 <div id="haceFlex2">
+		 <p id="largest">Total</p>
+		 <p id="precioProducto">$1.500</p>
+	 </div>
+	</div>
+	
+	</section>
+	<section class="sectionDesc2">
+		<div class="descripcionProducto2">
+		<a href="#" class="cargar10 cargar11">
+			<p> Consultar por WhatsApp</p>
+		
+		</a>
+		<p id="palabraClave" class="needMargin">Codigo SKU:2020</p>
+	</div>
+	</section>
+	<div class="modalComu">
+		<div class="modalComu2">
+				<img class="instMod" src="img/instagram.svg" alt="">
+				<img src="img/wpp.svg" alt="">
+		</div>
+		<div class="modalComu3">
+			<p>Volver</p>
+		</div>
+	</div>
 
 </body>
 
 <!-- Javascript -->
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" src="/js/producto.js"></script>
 <!--<script type="text/javascript" src="/js/emptyStates.js"></script>-->
 
 </html>
