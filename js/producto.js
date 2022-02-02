@@ -25,7 +25,7 @@ dot2.style.backgroundColor="rgb(196,196,196)";
 let contador=1;
 let respuesta=false;
 let respuesta2=false;
-let imagenes=["img/image 44.svg","img/image 55.png","img/image 44.svg"];
+let imagenes=["img/image44.svg","img/image55.png","img/image44.svg"];
 let end=0;
 let start=0;
 function validar(){
