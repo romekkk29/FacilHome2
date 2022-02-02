@@ -24,10 +24,32 @@ let dot3=document.querySelector(".dot3");
 dot2.style.backgroundColor="rgb(196,196,196)";
 let respuesta=false;
 let respuesta2=false;
-img.addEventListener("touchend",
-function(){
-   img.src="img/image 44.svg";
+
+let end=0;
+let start=0;
+function validar(){
+   img.addEventListener("touchstart",
+function (event){
+   respuesta=true;
+   console.log("move");
+   start =event.changedTouches[0].clientX;
+ 
 })
+   
+   img.addEventListener("touchend",
+function (event){
+   end= event.changedTouches[0].clientX;
+   respuesta2=true;
+   let diferencia= end-start;
+   if(respuesta==true && respuesta2==true && diferencia>0 ){
+      img.src="img/image 44.svg";
+   }
+   if(respuesta==true && respuesta2==true && diferencia<0 ){
+      img.src="img/image 44.svg";
+   }
+})
+}
+validar();
 
 
 dot1.addEventListener("click",function(){
