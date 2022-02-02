@@ -22,6 +22,13 @@ let dot1=document.querySelector(".dot1");
 let dot2=document.querySelector(".dot2");
 let dot3=document.querySelector(".dot3");
 dot2.style.backgroundColor="rgb(196,196,196)";
+let respuesta=false;
+let respuesta2=false;
+img.addEventListener("touchend",
+function(){
+   img.src="img/image 44.svg";
+})
+
 
 dot1.addEventListener("click",function(){
    dot1.style.backgroundColor="rgb(196,196,196)";
