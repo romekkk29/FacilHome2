@@ -81,15 +81,15 @@ validar();
 
 dot1.addEventListener("click",function(){
    izquierda();
-   img.src="img/image 44.svg";
+   img.src=imagenes[0];
 })
 dot2.addEventListener("click",function(){
    centro();
-   img.src="img/image 55.png";
+   img.src=imagenes[1];
 })
 dot3.addEventListener("click",function(){
    derecha();
-   img.src="img/image 44.svg";
+   img.src=imagenes[2];
 })
 function centro(){
    dot2.style.backgroundColor="rgb(196,196,196)";
