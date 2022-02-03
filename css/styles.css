@@ -249,20 +249,12 @@ a:hover {
   border-radius: 50%;
 }
 .c1{
-  background-color: #FECD1A;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.c2{
-  background-color: #FD3A69;
-}
-.c3{
-  background-color: #8E5DCD;
-}
-.c4{
-  background-color: #58E5E5;
-}
-.c5{
-  background-color: #50DBA9;
-}
+
 
 .historyUltimo{
   margin-right: 40px;
