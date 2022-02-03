@@ -657,7 +657,7 @@ nav.floating-menu .item {
 
 .qr-container {
   background-color: #F1F1F1;
-  margin: 20px auto 40px auto;
+  margin: 0px auto 40px auto;
   width: 200px;
   height: 200px;
   background-position: center center;
@@ -1384,6 +1384,11 @@ html{
   box-shadow: 5px 5px 50px -1px var(--shadow);
   border-radius: 4px;
   user-select: none;
+  width: 340px;
+  height: 206px;
+  
+  object-fit: cover;
+  
 }
 
 .grabbing {
@@ -1410,4 +1415,10 @@ html{
   max-width: 500px;
   border-radius: 20px;
   width: 30%;
+}
+.input-logout{
+  border:none;
+}
+.printable{
+  margin-bottom: 100px;
 }
