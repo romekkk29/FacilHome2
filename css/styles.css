@@ -10,6 +10,7 @@
 	BOTONES
 ==============================
 */
+
 html{
   overflow-x: hidden;
   overflow-y:auto;
@@ -1304,6 +1305,7 @@ font-size: 24px;
   margin-top:0px;
 }
 #puntosCarru {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1333,4 +1335,79 @@ font-size: 24px;
   object-fit: cover;
   width: 344px;
   height: 206px;
+  transition: all 0.5s ease-in-out;
+
+}
+html{
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+.slider-container {
+  height: 262px;
+  display: inline-flex;
+
+  overflow: hidden;
+  scrollbar-width: none;
+  transform: translateX(0);
+  will-change: transform;
+  transition: transform 0.6s ease-out;
+  cursor: grab;
+  margin-top:40px;
+  margin-bottom: 20px;
+}
+
+.slide{
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+ 
+}
+
+@media(min-width: 1200px){
+  .slide {
+    padding: 3rem;
+  }
+}
+
+.slide img{
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 5px 5px 50px -1px var(--shadow);
+  border-radius: 4px;
+  user-select: none;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.grabbing .slide img{
+  transform: scale(0.9);
+  box-shadow: 5px 5px 40px -1px var(--shadow);
+}
+
+
+
+.blanquear{
+  position: absolute;
+  width: 100%;
+  height: 262px;
+  background-color: white;
+  z-index: -10;
+  margin: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: white;
+  max-width: 500px;
+  border-radius: 20px;
+  width: 30%;
 }
