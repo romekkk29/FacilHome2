@@ -50,22 +50,7 @@
 	</nav>
 
 
-	<!-- <section class="sectionDesc3">
-		
-	<div class="descripcionProducto3">
-			<img id="imagenCarru" src="img/image55.png" alt="">
-			<img id="imagenCarru2" src="img/image44.svg" alt="">
-			<img id="imagenCarru3" src="img/image55.png" alt="">
-	</div>
-
-	<div id="puntosCarru"> 
-		<a href="#"><div class="dot1"></div></a>
-		<a href="#"><div class="dot2"></div></a>
-		<a href="#"><div class="dot3"></div></a>
-	</div>
-
-
-	</section> -->
+	
 	
 
 	<div class="slider-container">
@@ -102,31 +87,32 @@
 		<a href="#"><div class="dot3"></div></a>
 	</div>
 
-	<section class="sectionDesc" >	
+	<section class="sectionDesc" th:each="prod : ${producto}" >	
 		<div class="descripcionProducto">
      <div>
-		 <p id="palabraClave">Olmitos</p>
-		 <p id="tituloProducto">Botella Termica</p>
+		 <p id="palabraClave" >Nombre</p>
+		 <p id="tituloProducto" th:text="${prod.nombre}"></p>
 		
 	 </div>
 	
-	 <div>
+	 <div th:if="${prod.descripcion != ''}">
 		 <p id="palabraClave">Descripción</p>
-		 <p id="largest" >Botella termica de aluminio, 500ml. Colores rosa, turquesa, vision claro y gris</p>
+		 <p id="largest" th:text="${prod.descripcion}" ></p>
 	 </div>
 	 <div id="haceFlex">
 		 <div>
 			 <p id="palabraClave">Categoria</p>
-			 <p id="largest">Deco, Comfy</p>
+			 <p id="largest" th:text="${prod.categoria}"></p>
 		 </div>
 		 <div>
 			 <p id="palabraClave">Stock</p>
-			 <p id="largest">Disponible</p>
+			 <p id="largest" th:if="${prod.stock != '0'}">Disponible</p>
+			 <p id="largest" th:if="${prod.stock == '0'}">No disponible</p>
 		 </div>
 	 </div>
 	 <div id="haceFlex2">
 		 <p id="largest">Total</p>
-		 <p id="precioProducto">$1.500</p>
+		 <p id="precioProducto"  th:text="${prod.precio}"></p>
 	 </div>
 	</div>
 	
@@ -137,7 +123,7 @@
 			<p> Consultar por WhatsApp</p>
 		
 		</a>
-		<p id="palabraClave" class="needMargin">Codigo SKU:2020</p>
+		<p id="palabraClave" class="needMargin" th:text="${prod.codigo}"></p>
 	</div>
 	</section>
 	<div class="modalComu">
